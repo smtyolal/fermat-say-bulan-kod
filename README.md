@@ -2,6 +2,9 @@
 #include <stdio.h>
 #include <math.h>
 
+#include <stdio.h>
+#include <math.h>
+
 /*
 int exponent(int a, int b) {
         int result=a;
@@ -24,11 +27,11 @@ long long int value;
 printf("Fermat sayi kontrolu icin deger gir: ");
 scanf("%lli",&value);
 
-long long int solution=0,exp1=1;
+volatile long long int solution=0,exp1=1;
 
 
 
-   for (int i = 0; i <= value; i++)
+   for (register int i = 0; i <= value; i++)
    {
           
        solution = pow(2,pow(2,i)) + 1;
@@ -52,9 +55,6 @@ long long int solution=0,exp1=1;
   }
   
           
-
-
-
-
        return 0;
 }
+
