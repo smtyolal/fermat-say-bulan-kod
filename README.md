@@ -1,4 +1,4 @@
-# fermat-say-bulan-kod
+# fermat-sayi-bulan-kod
 #include <stdio.h>
 #include <math.h>
 
