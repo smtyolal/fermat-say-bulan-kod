@@ -1,10 +1,8 @@
 # fermat-say-bulan-kod
-
 #include <stdio.h>
 #include <math.h>
 
-
-
+/*
 int exponent(int a, int b) {
         int result=a;
         for(int i=0;i<b-1;i++) {
@@ -12,25 +10,28 @@ int exponent(int a, int b) {
         }
         return result;
 }
-
+*/
 
 
 int main () {
 
+
+
+
 //Fermat sayı 2^2^n+1
 
-int value;
+long long int value;
 printf("Fermat sayi kontrolu icin deger gir: ");
-scanf("%d",&value);
+scanf("%lli",&value);
 
-int solution=0,exp1=1;
+long long int solution=0,exp1=1;
 
 
 
-   for (int i = 0; i < value; i++)
+   for (int i = 0; i <= value; i++)
    {
           
-       solution = exponent(2,exponent(2,i)) + 1;
+       solution = pow(2,pow(2,i)) + 1;
 
        if (value == solution)
        {
@@ -44,7 +45,7 @@ int solution=0,exp1=1;
   {
          printf("True");
   }
-  
+
   if (value != solution)
   {
          printf("False");
